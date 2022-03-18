@@ -1,7 +1,7 @@
 <div>
     <div class="p-8 grid grid-cols-2 gap-8">
         <div class='space-y-4'>
-            <h1 class='text-4xl font-bold'>Novo Post</h1>
+            <h1 class='text-4xl font-bold'>{{ $post_id ? "Editando Post {$post_id}" : 'Novo Post' }}</h1>
             <form action="#" wire:submit.prevent='salvar' class='space-y-2'>
                 <x-input wire:model.debounce.500ms='titulo' placeholder='Título' label='Título' />
                 <x-textarea wire:model.debounce.500ms='descricao' label='Descrição' />

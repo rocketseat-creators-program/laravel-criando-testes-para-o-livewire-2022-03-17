@@ -26,6 +26,8 @@ class Posts extends Component
 
     public function salvar()
     {
+        $this->validate();
+
         if (empty($this->post_id)) {
             Post::create([
                 'titulo' => $this->titulo,
